@@ -50,7 +50,7 @@
     
     
 
-<h1>Chloridinine across the locations over the Time</h1>
+<h2>1.1 Chloridinine across the locations over the years</h2>
 <p>
     
 The levels of Chlorodinine have all significantly dropped in recent years. Despite a uniform drop across all locations, Kohsoom alone experiences a spike in it in June 2016 as seen below.
@@ -81,7 +81,7 @@ The levels of Chlorodinine have all significantly dropped in recent years. Despi
   "encoding": {
     "x": {
         "timeUnit": "yearmonth", "field": "sample date", "type": "temporal",
-      "axis": {"format": "%Y"}
+      "axis": {"format": "%Y"}, "title":"Year"
     
     },
     "y": {
@@ -97,7 +97,7 @@ The levels of Chlorodinine have all significantly dropped in recent years. Despi
   </script>
   
 
-<h1>Magnesium across the locations over the time</h1>
+<h2>1.2 Magnesium across the locations over the years</h2>
 <p> 
     There is a clear period in February to May 2011, where all locations of a particular stream (Boonsri-Kohsoom-Chai- Busrakhan-Kannika) along with Somchair, show a clear uptrend.</p>
 <!-- Container for the visualization -->
@@ -126,7 +126,8 @@ var vlSpec4 =
   "x": {
     "field": "sample date",
     "type": "temporal",
-    "scale": {"rangeStep": 50, "padding": 0.5}
+    "scale": {"rangeStep": 50, "padding": 0.5},
+    "title":"Year"
   },
   "y": {
     
@@ -143,7 +144,7 @@ var vlSpec4 =
 vegaEmbed("#vis4", vlSpec4);
 </script>
 
-<h1>Ammonium across the Locatoins over the time</h1>
+<h2>1.3 Ammonium across the Locatoins over the years</h2>
 <p>  The Below visualisations shows:
     <ol>
         <li>
@@ -184,7 +185,7 @@ Total Phosphorus as well, follows a very similar uptrend at Kohsoom, with an ave
       }
   ],
   "width": 1050,
-  "height": 40,
+  "height": 50,
   "data": {
       /*"url": "CW2 zip/Boonsong Lekagul waterways readings.csv",*/
       "url": "CW2 zip/Modified CSV files/Ammonium.csv"
@@ -224,7 +225,7 @@ Total Phosphorus as well, follows a very similar uptrend at Kohsoom, with an ave
   vegaEmbed("#vis1", vlSpec1);
   </script>
 
-<h1>Anionic across the locations</h1>
+<h2>1.4 Anionic Active surfactants across the locations over the years</h2>
 <!-- Container for the visualization -->
 <p>
     
@@ -244,7 +245,7 @@ var vlSpec2 =
 "data": {"url": "CW2 zip/Modified CSV files/anionic.csv"},
 "mark": "line",
 "encoding": {
-  "x": {"field": "sample date", "type": "temporal"},
+  "x": {"field": "sample date", "type": "temporal", "title":"Year"},
   "y": {"field": "Anionic value", "type": "quantitative"},
   "color": {"field": "location", "type": "nominal"}
 }
@@ -256,7 +257,7 @@ vegaEmbed("#vis2", vlSpec2);
 
 
 
-<h1> Methylosmoline across the locations</h1>
+<h2>1.5 Methylosmoline across the locations over the years</h2>
   <!-- Container for the visualization -->
   <p>
     It is very evident that around January 2016, Methylosmoline levels start to spike up at two locations, namely Kohsoom and Somchair.
@@ -285,7 +286,7 @@ vegaEmbed("#vis2", vlSpec2);
   "encoding": {
     "x": {
       "timeUnit": "yearmonth", "field": "sample date", "type": "temporal",
-      "axis": {"format": "%Y"}
+      "axis": {"format": "%Y"}, "title":"Year"
     },
     "y": {
       "field": "Methylosmoline value", "type": "quantitative"
@@ -304,7 +305,7 @@ vegaEmbed("#vis2", vlSpec2);
   vegaEmbed("#vis5", vlSpec5);
   </script>
 
-<h1> Total nitrogen across the locations</h1>
+<h2> 1.6 Total nitrogen across the locations </h2>
 <!-- Container for the visualization -->
 <p>
     It is clearly visible that during the period of July 2014 to June 2015 in addition to Kohsoom, an uptrend in Total Nitrogen is visible at Tansanee as well.
@@ -330,12 +331,12 @@ var vlSpec6 =
     "url": "CW2 zip/Modified CSV files/Nitrogen.csv"
         },
         
-        "mark": "bar",
+        "mark": "line",
 "encoding": {
   "x": {
     
     "timeUnit": "yearmonth", "field": "sample date", "type": "temporal",
-      "axis": {"format": "%Y"}
+      "axis": {"format": "%Y"}, "title":"Year"
     
   },
   "y": {
@@ -356,7 +357,7 @@ var vlSpec6 =
 vegaEmbed("#vis6", vlSpec6);
 </script>
 
-<h1> Water temperature across the locatinos</h1>
+<h2>1.7 Water temperature across the locatinos</h2>
   <!-- Container for the visualization -->
   <p>
     The cycle plot developed shows the temperature of water goes up by 4-50 C during the months of June, July and August throughout the waterways.
@@ -384,7 +385,7 @@ vegaEmbed("#vis6", vlSpec6);
      
           "mark": "trail",
   "encoding": {
-    "x": {"field": "sample date", "type": "temporal"},
+    "x": {"field": "sample date", "type": "temporal","title":"Year"},
     "y": {"field": "Water temperature value", "type": "quantitative"},
     /*"size": {"field": "price", "type": "quantitative"}, */
     "color": {"field": "location", "type": "nominal"}
@@ -400,7 +401,7 @@ vegaEmbed("#vis6", vlSpec6);
 
     <div>
         <p>
-                In the order of appearance below, one can see discernible patterns in the following chemicals.</p>
+               <u> In the order of appearance in above visualations, one can see discernible patterns in the following chemicals.</u></p>
         <ol>
         <li>
             
@@ -459,9 +460,6 @@ vegaEmbed("#vis6", vlSpec6);
                 <li>
                     Water temperature, which is a physical property has different unit of measurement as compared to the rest.
                 </li>
-                <li>
-                    The readings of the chemicals represented on the figures above and below, refer to the average value is being used. Tableau helps to automatically convert multiple readings at a particular time/location by aggregating them.
-                </li>
             </ul>
 
         </P>
@@ -476,12 +474,12 @@ vegaEmbed("#vis6", vlSpec6);
         Explaination
     </u> </h4>
     <h4>
-        The August 2003 Effect
+       2.1 The August 2003 Effect
     </h4>
     <p>
             Several locations show a spike in a Chromium, Manganese, Copper and Iron just for one day, leading the team to believe it might be an anomaly in the readings. This might probably due to a wrong calibration of the measuring equipment. This is noticed to be happening at every location except Boonsri
     </p>
-    <h2> What happened on 15th Aug, 2003?</h2>
+    <h3> What happened on 15th Aug, 2003?</h3>
  
     <div id="vis8"></div>
 
@@ -497,14 +495,17 @@ vegaEmbed("#vis6", vlSpec6);
     "data": {"url": "CW2 zip/Modified CSV files/effect for chemicals.csv"},
     "mark": "line",
     "encoding": {
-      "x": {"field": "sample date", "type": "temporal"},
+      "x": {"field": "sample date", "type": "temporal","title":"Year"},
       "y": {"field": "values", "type": "quantitative"},
       
       "row": {
             "field": "measure",
             "type": "nominal",
            "title": "some important chemicals"
-        }
+        },"color":
+        { "field":"location", "type":"nominal" 
+        },
+        
     }
   }
   
@@ -514,7 +515,7 @@ vegaEmbed("#vis6", vlSpec6);
 
 
     <h3>
-            The surge in unique measurements</h3>
+            2.2 The surge in unique measurements</h3>
         <p>
                 On average, there were 43 chemicals measured in a typical year. 2008 and 2009 saw the introduction of over 35 chemicals, leading to the surge in the number of unique chemicals captured. How this affects the analysis is that these unique set of chemicals cannot be compared neither before nor after that specific narrow timeframe. We presume that the hydrology department had an impending need to collect a few samples during those two years, for some research purposes, but later dropped the initiative.
 
@@ -523,7 +524,7 @@ vegaEmbed("#vis6", vlSpec6);
                 The heatmap illustrates that only a 20% of the total chemicals (21 out of 105) had measurements in all years of the sampling. It also shows which chemicals were measured only as part of the two-year surge.
         </p>
 
-        <h1> Heatmap of recordings of each chemical over the years</h1>
+        <h2> Heatmap of recordings of each chemical over the years</h2>
   <!-- Container for the visualization -->
   <div id="vis"></div>
 
@@ -565,6 +566,7 @@ vegaEmbed("#vis6", vlSpec6);
 "field": "sample date",
 
 "type": "temporal",
+"title":"Year",
 
 "axis": {"labelAngle": 0}
 
@@ -595,7 +597,7 @@ vegaEmbed("#vis6", vlSpec6);
   </script>
 
 
-<h1> Total hardness in Boonsri and Kohsoom</h1>
+<h2>2.3 Total hardness in Boonsri and Kohsoom</h2>
 <p>
     Total Hardness, as seen below, seem quite anomalous for the fact that no other location was measured during 2011-2012 (light sky blue color). This induces a doubt that some readings could have been tampered with, for the sake of achieving environment compliance, etc.
 </p>
@@ -625,7 +627,7 @@ var vlSpec10 =
   "x": {
   
     "timeUnit": "yearmonth", "field": "sample date", "type": "temporal",
-    "axis": {"format": "%Y"}
+    "axis": {"format": "%Y"}, "title":"Year"
 
   },
   "y": {
@@ -644,7 +646,7 @@ vegaEmbed("#vis10", vlSpec10);
 </script>
 
 
-<h1> Coverage of the sampling  </h1>
+<h2>2.4 Coverage of the sampling (collecting the samples data)  </h2>
 <p>
 The plots below show that the coverage of locations are disproportionate, implying the hydrology department has not collected comprehensive data across the preserve. It is also affected by the fact that Achara, Decha and Tansanee started to be measured only from 2009.
 
@@ -674,7 +676,7 @@ var vlSpec11 =
         
         "mark": "line",
 "encoding": {
-  "x": {"field": "sample date", "type": "temporal"},
+  "x": {"field": "sample date", "type": "temporal","title":"Year"},
   "y": { "aggregate": "count","field": "value", "type": "quantitative"},
   "color": {"field": "location", "type": "nominal"},
   "row": {
@@ -692,21 +694,21 @@ var vlSpec11 =
 vegaEmbed("#vis11", vlSpec11);
 </script>
 
-<p> <u>sequential sampling approach: </u>  
+<h3><u>2.5 sequential sampling approach: </u></h3>  
 
-    Currently, analysis of chemical settlement along river flow is hard to do, as there is no indication of river flow. For a thorough analysis, along the same stream, points upstream and downstream must be measured sequentially. For e.g. if Boonsri was measured in the first week, then it makes sense to compare the same chemical if it has propagated downstream to Chai or Kannika during the second/third week. Given the date of sampling and location, we find the percentage of common routes taken in a river system</p>
+    <p>Currently, analysis of chemical settlement along river flow is hard to do, as there is no indication of river flow. For a thorough analysis, along the same stream, points upstream and downstream must be measured sequentially. For e.g. if Boonsri was measured in the first week, then it makes sense to compare the same chemical if it has propagated downstream to Chai or Kannika during the second/third week. Given the date of sampling and location, we find the percentage of common routes taken in a river system</p>
 
 
-    <h3>
-        Suggestion for a possible route
-    </h3>
+    <h2>
+        <u>Suggestion for a possible route</u>
+    </h2>
     <img src="CW2 zip/images/possible route.PNG" />
     
     </div>
     <div>
     <h2> 3. After reviewing the data, do any of your findings cause particular concern for the Pipit or other wildlife? Would you suggest any changes in the sampling strategy to better understand the waterways situation in the Preserve? Your submission for this question should contain no more than 6 visualisations and 500 words. </h2>
     <h4> Explaination </h4>
-    <h3> Drop in Oxygen Saturation Levels </h3>
+    <h3> 3.1 Drop in Oxygen Saturation Levels </h3>
     <p>
             Birds and wildlife feed off water, and Oxygen is essential for any living organism, but Oxygen saturation in water is clearly depleting lower near Kohsoom and Tansanee.
     </p>
@@ -736,7 +738,7 @@ vegaEmbed("#vis11", vlSpec11);
     "encoding": {
       "x": {
         "timeUnit": "yearmonth", "field": "sample date", "type": "temporal",
-        "axis": {"format": "%Y"}
+        "axis": {"format": "%Y"},"title":"Year"
       },
       "y": {
         "aggregate": "average", "field": "value", "type": "quantitative"
@@ -747,15 +749,12 @@ vegaEmbed("#vis11", vlSpec11);
       }
     }
   }
-  
-       
-    
     // Embed the visualization in the container with id `vis,
     vegaEmbed("#vis12", vlSpec12);
     </script>
 
     <h3>
-        Lead contamination
+       3.2 Lead contamination
     </h3>
     <p>
             At Kohsoom, Somchair and Boonsri, a steep uptrend in lead contamination levels is seen. Lead is a harmful contaminant in water.
@@ -784,7 +783,7 @@ vegaEmbed("#vis11", vlSpec11);
 
           "mark": "line",
   "encoding": {
-    "x": {"field": "sample date", "type": "temporal"},
+    "x": {"field": "sample date", "type": "temporal","title":"Year"},
     "y": {"aggregare":"mean","field": "value", "type": "quantitative"}, 
     "row": {
           "field": "location",
@@ -797,12 +796,102 @@ vegaEmbed("#vis11", vlSpec11);
   // Embed the visualization in the container with id `vis,
   vegaEmbed("#vis13", vlSpec13);
   </script>
+<h3>
+        3.3 Release of hot effluents?</h3>
+        <p>
+                The trend line shows a steeper uptrend at Tansanee as compared to the other locations. There is good reason to believe that the peak of 34C in August 2016 might not have been caused due to natural factors, as the rest of the proximal locations hover around the range of 22-25 C. One plausible explanation could be a factory which uses Tansanee as a water source for their cooling towers, and discharges hot effluents onto the water.
+        </p>
 
-  
+<h3> Water Temperature trends </h3>
+<!-- Container for the visualization -->
+<div id="vis14"></div>
 
+<script>
+// Assign the specification to a local variable vlSpec.
+var vlSpec14 = 
 
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+"description": " Values across locations",
+"transform": [
+    {
+        "filter": "datum.symbol !== 'GOOG'"
+    }
+             ],
+"width": 1200,
+"height": 53,
+"data": {
+     /*"url": "CW2 zip/Boonsong Lekagul waterways readings.csv",*/
+     "url": "CW2 zip/Modified CSV files/water temp.csv"
+        },
+   
+        "mark": "trail",
+"encoding": {
+  "x": {"field": "sample date", "type": "temporal","title":"year"},
+  "y": {"field": "Water temperature value", "type": "quantitative", "title":"water Temp"},
+  /*"size": {"field": "price", "type": "quantitative"}, */
+  "row": {"field": "location", "type": "nominal"}
+}
+} 
+   
+// Embed the visualization in the container with id `vis,
+vegaEmbed("#vis14", vlSpec14);
+</script>
 
+<h3>
+    3.4 A relocated dumping site at Somchair/Tansanee
+</h3>
+<p>
+        The recent spikes in Somchair and Tansanee in terms of Lead, Total Nitrogen, etc. provide us a future direction to ponder if these might be new dumping sites that have crept up in recent years. We gain impetus from the below points:
+</p>
+<ol>
+    <li>
+          <p>Methylosmoline is expected to be higher near Kohsoom, as Kasios had been dumping their industrial waste. However, the uptrend at Somchair is totally unexpected and shows that the Methylosmoline content elsewhere in the preserve might continue to harm the pipits</p>
+    </li>
+    <li>
+            <p>Magnesium uptrend at Somchair (Figure 5) happens along with an uptrend in the stream system of Boonsri-Kannika. These two streams are totally unconnected, discounting a transmission through water borne channels, giving a strong reason to believe some other illicit activity might be happening at Somchair</p>
+    </li>
 
+</ol>
     </div>
+
+    <h1>
+            <u>Proposed changes to sampling strategy </u>
+    </h1>
+    <h3>
+            Regular sampling frequency
+    </h3>
+
+    <p>
+            The interval between two consecutive samples (not referring to multiple samples on the same day), is shown below. At Boonsri, the department was measuring samples once a month previously, whereas in recent years, we see a surge in the measurements on a weekly/daily basis. In Achara, the trend is quite the opposite of Boonsri. No daily recordings at Tansanee probably illustrates the level of access samplers have in getting there or the importance of Tansanee to the samplers. Tansanee and Somchair need to be measured more frequently than before. Water temperature measured every day at Chai in 2016 probably tells that the samplers have now begun to move towards consistent sampling of chemicals at various locations.
+    </p> </br>
+<p>
+        Redundancy in the chemicals collected can also be understood if the sampling frequencies are aligned across locations, as correlations of different chemical measurements can be checked upon and thereby help narrow down on the chemicals to focus on.
+</p>
+<p>
+    The following visualations shows the recording the frequency of sampling by noting the difference betweeen two consecutive measurements at a particular location(irrespective of the chemical) by using Tableau. 
+
+</p>
+
+
+<div>
+    <div>
+        <img src= "CW2 zip/images/Frequency at Boonsri.PNG" />
+    </div>
+    <div>
+        <img src="CW2 zip/images/Frequency at Achara.PNG" />
+    </div>
+</div>
+<div>
+        <div>
+                <img src="CW2 zip/images/Frequency at Chai.PNG" />
+        </div>
+        <div>
+                <img src="CW2 zip/images/Frequency at Tansanee.PNG" />
+        </div>
+        <p style="color:mediumorchid">
+                Fig. The frequency of sampling by noting the difference betweeen two consecutive measurements at a particular location(irrespective of the chemical) by using Tableau.
+        </p>
+</div>
 </body>
 </html>
