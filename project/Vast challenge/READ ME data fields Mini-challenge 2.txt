@@ -1,5 +1,7 @@
 READ ME:  Data Fields for Mini-Challenge 2
 
+<< Please Make Webserver current folder as Vast challenge folder >>
+
 Id: Identification number for the record (only for bookkeeping)
 
 Value: Measured value for the chemical or property in this record
